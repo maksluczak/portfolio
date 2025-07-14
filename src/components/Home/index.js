@@ -2,6 +2,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
+import Cube from './Cube';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -37,8 +38,11 @@ const Home = () => {
                 <p>
                     Currently looking for an internship or junior backend developer position where I can deepen my knowledge of backend architecture, databases, and API design.
                 </p>
-                <Link to="/contact" className="flat-button">CONTACT ME</Link>
+                <Link to="/contact" className="flat-button">
+                    CONTACT ME
+                </Link>
             </div>
+            <Cube />
         </div>
     );
 }
