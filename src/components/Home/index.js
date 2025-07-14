@@ -1,12 +1,34 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import AnimatedLetters from '../AnimatedLetters';
 
 const Home = () => {
+    const [letterClass, setLetterClass] = useState('text-animate');
+    const nameArray = ['M', 'a', 'k', 's', 'y', 'm', 'i', 'l', 'i', 'a', 'n'];
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
 
     return (
         <div className="container home-page">
             <div className="text-zone">
-                <h1>Hi,<br /> I'm Maksymilian
+                <h1>
+                <span className={letterClass}>H</span>
+                <span className={`${letterClass} _12`}>i,</span>
+                <br /> 
+                <span className={`${letterClass} _13`}>I</span>
+                <span className={`${letterClass} _14`}>'m&nbsp;</span>
+                <AnimatedLetters 
+                    letterClass={letterClass}
+                    strArray={nameArray}
+                    idx={15}/>
                 </h1>
                 <h2>
                     AGH University Of Cracow Student / Backend Developer <br />
