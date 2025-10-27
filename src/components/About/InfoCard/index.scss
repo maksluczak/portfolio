@@ -4,29 +4,44 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  animation: fadeIn 1s 2.1s backwards;
+  opacity: 0;
+  animation: fadeInContainer 0.5s ease forwards;
+}
+
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .info-card {
-  h1 {
+  .title {
     color: #fff;
     font-size: 36px;
     margin-top: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
-    animation: fadeIn 1s 1.2s backwards;
+    opacity: 0;
+    animation: fadeSlideIn 0.6s ease forwards;
+    animation-delay: 0.2s;
   }
 
-  p {
+  .desc {
     color: #8d8d8d;
     margin-top: 20px;
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     font-family: sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 20px;
-    animation: fadeIn 1s 1.4s backwards;
-    width: 95%;
+    opacity: 0;
+    animation: fadeSlideIn 0.6s ease forwards;
+    animation-delay: 0.5s;
+    width: 92%;
   }
 
   .card {
@@ -34,25 +49,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    animation: fadeIn 1s 1.6s backwards;
 
-    .info-card {
-      font-weight: 400;
-      letter-spacing: 1px;
+    .info-item {
+      opacity: 0;
+      transform: translateY(15px);
       width: 42%;
-      padding: 8px 8px;
-      font-family: sans-serif;
-      text-decoration: none;
+      padding: 8px;
       border: 1px solid #ffd700;
-      margin-top: 5px;
-      margin-right: 5px;
-      float: left;
-      overflow-wrap: break-word;
-      white-space: normal;
       text-align: center;
+      font-family: sans-serif;
+      animation: slideUpFade 0.5s ease forwards;
 
       h2 {
-        white-space: pre-line;
         font-size: 11px;
         color: #fff;
       }
@@ -69,10 +77,33 @@
       }
     }
 
-    @for $i from 1 through 25 {
-      .info-card._#{$i} {
-        animation-delay: #{$i / 10}s;
+    // sekwencyjne wejście elementów
+    @for $i from 0 through 20 {
+      .item-#{$i} {
+        animation-delay: #{0.8 + ($i * 0.15)}s;
       }
     }
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
