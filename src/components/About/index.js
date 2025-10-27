@@ -8,10 +8,14 @@ const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [activeSection, setActiveSection] = useState('about')
   const [showCard, setShowCard] = useState(true)
+  const [firstLoad, setFirstLoad] = useState(true)
+  const [cardDelay, setCardDelay] = useState('2.5s')
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLetterClass('text-animate-hover')
+      setFirstLoad(false)
+      setCardDelay('0s')
     }, 4000)
     return () => clearTimeout(timeout)
   }, [])
@@ -22,6 +26,7 @@ const About = () => {
     setTimeout(() => {
       setActiveSection(section)
       setShowCard(true)
+      setCardDelay('0s')
     }, 300)
   }
 
@@ -83,6 +88,12 @@ const About = () => {
       content: 'cube',
     },
   }
+
+  document.documentElement.style.setProperty('--card-delay', cardDelay)
+  document.documentElement.style.setProperty(
+    '--fade-duration',
+    firstLoad ? '1.5s' : '0.6s'
+  )
 
   return (
     <div className="container about-page">

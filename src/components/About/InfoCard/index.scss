@@ -2,10 +2,11 @@
   width: 45%;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   opacity: 0;
-  animation: fadeInContainer 0.5s ease forwards;
+  animation: fadeInContainer var(--fade-duration) ease forwards;
+  animation-delay: var(--card-delay);
 }
 
 @keyframes fadeInContainer {
