@@ -2,7 +2,7 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 
-const AboutSection = ({activeSection, setActiveSection}) => {
+const EducationSection = ({activeSection, setActiveSection}) => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
@@ -13,34 +13,33 @@ const AboutSection = ({activeSection, setActiveSection}) => {
   }, []);
 
   const content = [
-    { fieldName: 'Name', fieldValue: 'MAKSYMILIAN ŁUCZAK' },
-    { fieldName: 'Phone', fieldValue: '(+48) 739 041 228' },
-    { fieldName: 'State', fieldValue: 'COMPUTER SCIENCE MAJOR STUDENT' },
-    { fieldName: 'Email', fieldValue: 'MAKSLUCZAK99@GMAIL.COM' },
+    { institution: 'AGH Technical Computer Science', duration: '2023 - now' },
+    { institution: 'B2 First (FCE)', duration: '2022' },
+    { institution: 'Coursera IBM JavaScript Backend<br/>Developer', duration: '2025 - now' },
+    { institution: 'Coursera Microsoft Python<br/>Development', duration: '2025 - now' },
   ];
+
 
   return (
     <>
-      <div className="about-section">
+      <div className="education-section">
         <h1>
           <AnimatedLetters
             letterClass={letterClass}
-            strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+            strArray={['M', 'y', ' ', 'e', 'd', 'u', 'c', 'a', 't', 'i', 'o', 'n']}
             idx={10}
           />
         </h1>
 
         <p>
-          I’m a curious and motivated person who loves diving into new ideas - whether in tech or
-          beyond. I enjoy working with people, learning from others and improving
-          a little every day. In my free time, I explore new interests, read, and tinker with side projects.
+          ...
         </p>
 
         <div className='info-container'>
           {content.map((item, index) => (
             <div key={index} className={`info-item item-${index}`}>
-              <h2>{item.fieldName}:</h2>
-              <strong>{item.fieldValue}</strong>
+              <h2 dangerouslySetInnerHTML={{ __html: item.institution }} />
+              <strong>{item.duration}</strong>
             </div>
           ))}
         </div>
@@ -51,4 +50,4 @@ const AboutSection = ({activeSection, setActiveSection}) => {
   );
 }
 
-export default AboutSection;
+export default EducationSection;
