@@ -1,110 +1,110 @@
-.info-card-container {
-  width: 45%;
-  position: absolute;
-  right: 0;
-  top: 30%;
-  transform: translateY(-50%);
-  opacity: 0;
-  animation: fadeInContainer var(--fade-duration) ease forwards;
-  animation-delay: var(--card-delay);
-}
-
-@keyframes fadeInContainer {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.info-card {
-  .title {
-    color: #fff;
-    font-size: 36px;
-    margin-top: 0;
-    font-family: 'Coolvetica';
-    font-weight: 400;
-    opacity: 0;
-    animation: fadeSlideIn 0.6s ease forwards;
-    animation-delay: 0.2s;
-  }
-
-  .desc {
-    color: #8d8d8d;
-    margin-top: 20px;
-    font-size: 12px;
-    font-family: sans-serif;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeSlideIn 0.6s ease forwards;
-    animation-delay: 0.5s;
-    width: 92%;
-  }
-
-  .card {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    .info-item {
-      opacity: 0;
-      transform: translateY(15px);
-      width: 42%;
-      padding: 8px;
-      border: 1px solid #ffd700;
-      text-align: center;
-      font-family: sans-serif;
-      animation: slideUpFade 0.5s ease forwards;
-
-      h2 {
-        font-size: 11px;
-        color: #fff;
-      }
-
-      strong {
-        font-size: 12px;
-        color: #ffd700;
-      }
-
-      a {
-        display: block;
-        font-size: 15px;
-        line-height: 16px;
-      }
-    }
-
-    // sekwencyjne wejście elementów
-    @for $i from 0 through 20 {
-      .item-#{$i} {
-        animation-delay: #{0.8 + ($i * 0.15)}s;
-      }
-    }
-  }
-}
-
-@keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUpFade {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+//.info-card-container {
+//  width: 45%;
+//  position: absolute;
+//  right: 0;
+//  top: 30%;
+//  transform: translateY(-50%);
+//  opacity: 0;
+//  animation: fadeInContainer var(--fade-duration) ease forwards;
+//  animation-delay: var(--card-delay);
+//}
+//
+//@keyframes fadeInContainer {
+//  from {
+//    opacity: 0;
+//    transform: translateY(10px);
+//  }
+//  to {
+//    opacity: 1;
+//    transform: translateY(0);
+//  }
+//}
+//
+//.info-card {
+//  .title {
+//    color: #fff;
+//    font-size: 36px;
+//    margin-top: 0;
+//    font-family: 'Coolvetica';
+//    font-weight: 400;
+//    opacity: 0;
+//    animation: fadeSlideIn 0.6s ease forwards;
+//    animation-delay: 0.2s;
+//  }
+//
+//  .desc {
+//    color: #8d8d8d;
+//    margin-top: 20px;
+//    font-size: 12px;
+//    font-family: sans-serif;
+//    letter-spacing: 2px;
+//    margin-bottom: 20px;
+//    opacity: 0;
+//    animation: fadeSlideIn 0.6s ease forwards;
+//    animation-delay: 0.5s;
+//    width: 92%;
+//  }
+//
+//  .card {
+//    margin-top: 20px;
+//    display: flex;
+//    flex-wrap: wrap;
+//    gap: 10px;
+//
+//    .info-item {
+//      opacity: 0;
+//      transform: translateY(15px);
+//      width: 42%;
+//      padding: 8px;
+//      border: 1px solid #ffd700;
+//      text-align: center;
+//      font-family: sans-serif;
+//      animation: slideUpFade 0.5s ease forwards;
+//
+//      h2 {
+//        font-size: 11px;
+//        color: #fff;
+//      }
+//
+//      strong {
+//        font-size: 12px;
+//        color: #ffd700;
+//      }
+//
+//      a {
+//        display: block;
+//        font-size: 15px;
+//        line-height: 16px;
+//      }
+//    }
+//
+//    // sekwencyjne wejście elementów
+//    @for $i from 0 through 20 {
+//      .item-#{$i} {
+//        animation-delay: #{0.8 + ($i * 0.15)}s;
+//      }
+//    }
+//  }
+//}
+//
+//@keyframes fadeSlideIn {
+//  from {
+//    opacity: 0;
+//    transform: translateY(10px);
+//  }
+//  to {
+//    opacity: 1;
+//    transform: translateY(0);
+//  }
+//}
+//
+//@keyframes slideUpFade {
+//  from {
+//    opacity: 0;
+//    transform: translateY(20px);
+//  }
+//  to {
+//    opacity: 1;
+//    transform: translateY(0);
+//  }
+//}
