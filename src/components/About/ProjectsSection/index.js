@@ -53,7 +53,7 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
             <div className="card-header">
               <h2>{project.name}</h2>
               <a className='project-link' href={project.link} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} color="#08CB00" />
+                <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>
             <p>{project.description}</p>

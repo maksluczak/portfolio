@@ -36,7 +36,7 @@ const InfoCard = ({ item }) => {
                   {object.description && <p>{object.description}</p>}
                   {object.link && (
                     <a target="_blank" rel="noreferrer" href={object.link}>
-                      <FontAwesomeIcon icon={faGithub} color="#08CB00" />
+                      <FontAwesomeIcon icon={faGithub} />
                     </a>
                   )}
                 </div>
