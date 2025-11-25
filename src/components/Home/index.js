@@ -2,7 +2,6 @@ import './index.scss'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import Cube from './Cube'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -33,7 +32,7 @@ const Home = () => {
         </h1>
         <h2>
           AGH University Of Cracow Student / Software Developer <br />
-          Node.js / Express / Flask / Spring Boot / MongoDB
+          Node.js / Express / React / Java / Spring Boot / Python / C/C++
         </h2>
         <p>
           Currently looking for an internship or junior software developer
@@ -44,7 +43,6 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
-      <Cube />
     </div>
   )
 }

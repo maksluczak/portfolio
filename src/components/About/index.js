@@ -4,6 +4,7 @@ import MainSection from './MainSection'
 import AboutSection from './AboutSection'
 import EducationSection from './EducationSection'
 import ProjectSection from './ProjectsSection'
+import Cube from '../About/Cube'
 
 const About = () => {
   const [activeSection, setActiveSection] = useState('main')
@@ -23,6 +24,7 @@ const About = () => {
   return (
     <div className="container about-page">
       {renderSection()}
+      <Cube />
     </div>
   )
 }
