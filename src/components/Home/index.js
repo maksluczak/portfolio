@@ -32,11 +32,11 @@ const Home = () => {
           />
         </h1>
         <h2>
-          AGH University Of Cracow Student / Backend Developer <br />
+          AGH University Of Cracow Student / Software Developer <br />
           Node.js / Express / Flask / Spring Boot / MongoDB
         </h2>
         <p>
-          Currently looking for an internship or junior backend developer
+          Currently looking for an internship or junior software developer
           position where I can deepen my knowledge of backend architecture,
           databases, and API design.
         </p>

@@ -17,22 +17,22 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
   const content = [
     {
       name: 'AllerNote',
-      description: 'A three-tier application for allergy management: Next.js frontend for tracking pollen intensity and symptoms, Express backend handling API logic and authentication, MongoDB database storing user data, notes and history.',
+      description: 'A three-tier application for allergy management: <b>Next.js</b> frontend for tracking pollen intensity and symptoms, <b>Express</b> backend handling API logic and authentication, <b>MongoDB</b> database storing user data, notes and history.',
       link: '#',
     },
     {
       name: 'Snake in Java',
-      description: 'A simple window-based Java Snake game built with Swing, featuring keyboard controls, dynamic movement, collision detection, and a scoring system.',
+      description: 'A simple window-based <b>Java</b> Snake game built with <b>Swing</b>, featuring keyboard controls, dynamic movement, collision detection, and a scoring system.',
       link: '#',
     },
     {
       name: 'E-Commerce App',
-      description: 'A three-tier e-commerce application built with Next.js (frontend) and TypeScript, Express/Node.js (backend), and MongoDB for data storage. Integrated with Stripe API to simulate secure payments.',
+      description: 'A three-tier e-commerce application built with <b>Next.js</b> and TypeScript, <b>Express</b>, and <b>MongoDB</b> for data storage. Integrated with Stripe API to simulate secure payments.',
       link: '#',
     },
     {
       name: 'File Upload App',
-      description: 'A full-stack application built with React on the frontend and Spring Boot on the backend, featuring a REST API for file uploads to Amazon S3.',
+      description: 'A full-stack application built with <b>React</b> on the frontend and <b>Spring Boot</b> on the backend, featuring a REST API for file uploads to Amazon S3.',
       link: '#',
     },
   ];
@@ -46,17 +46,20 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
           idx={10}
         />
       </h1>
+      <p>
+        Here are a few of my projects - for more, feel free to visit my GitHub.
+      </p>
 
       <div className="projects-list">
-        {content.map((project, idx) => (
+        {content.map((item, idx) => (
           <div key={idx} className={`project-card card-${idx}`}>
             <div className="card-header">
-              <h2>{project.name}</h2>
-              <a className='project-link' href={project.link} target="_blank" rel="noopener noreferrer">
+              <h2>{item.name}</h2>
+              <a className='project-link' href={item.link} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>
-            <p>{project.description}</p>
+            <div className='project-description' dangerouslySetInnerHTML={{ __html: item.description }}></div>
           </div>
         ))}
       </div>
