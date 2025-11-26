@@ -51,7 +51,7 @@
   }
 
   .contact-form {
-    width: 100%;
+    width: 95%;
     margin-top: 20px;
 
     ul {
@@ -60,26 +60,29 @@
 
       li {
         padding: 0;
-        margin: 0;
         list-style: none;
         margin-bottom: 10px;
         overflow: hidden;
         display: block;
         position: relative;
         opacity: 0;
-        animation: fadeInUp 2s 2s;
-        animation-fill-mode: forwards;
+        animation: fadeInUp 2s 2s forwards;
       }
 
-      li.half {
-        width: 49%;
-        margin-left: 2%;
+      .half {
+        width: 48.5%;
         float: left;
-        clear: none;
+      }
 
-        &:first-child {
-          margin-left: 0;
-        }
+      .half + .half {
+        margin-left: 3%;
+      }
+
+      li.full {
+        width: 100%;
+        float: left;
+        clear: both;
+        margin-top: 10px;
       }
     }
 
@@ -103,20 +106,15 @@
       font-size: 16px;
       color: #fff;
       padding: 10px 20px;
-      box-sizing: border-box;
       resize: none;
-
-      &:focus {
-        outline: none;
-      }
+      box-sizing: border-box;
     }
 
     .flat-button {
       color: #08CB00;
-      background: 0 0;
+      background: none;
       font-size: 11px;
       letter-spacing: 3px;
-      text-decoration: none;
       padding: 8px 10px;
       border: 1px solid #08CB00;
       float: right;

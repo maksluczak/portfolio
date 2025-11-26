@@ -33,13 +33,13 @@ const Contact = () => {
             <li className="half">
               <input type="text" name="email" placeholder="Email" required/>
             </li>
-            <li>
+            <li className="full">
               <input type="text" name="subject" placeholder="Subject" required/>
             </li>
-            <li>
+            <li className="full">
               <textarea name="message" placeholder="Message" required/>
             </li>
-            <li>
+            <li className="full">
               <input type="submit" className="flat-button" value="SEND"/>
             </li>
           </ul>
