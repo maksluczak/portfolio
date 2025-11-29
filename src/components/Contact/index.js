@@ -1,6 +1,7 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
+import ContactRotation from './ContactRotation'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -45,6 +46,7 @@ const Contact = () => {
           </ul>
         </div>
       </div>
+      <ContactRotation />
     </div>
   )
 }
