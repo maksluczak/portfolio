@@ -33,3 +33,9 @@
     box-shadow: 0 0 5px #08CB00;
   }
 }
+
+@media (max-width: 1400px) {
+  .my-image-container {
+    display: none;
+  }
+}

@@ -7,6 +7,10 @@
 .top-tags {
   bottom: auto;
   top: 35px;
+
+  @media screen and (max-width: 1199px) {
+    top: 80px;
+  }
 }
 
 .tags {
@@ -17,6 +21,10 @@
   left: 120px;
   font-size: 18px;
   font-family: 'La Belle Aurore', cursive;
+
+  @media screen and (max-width: 1199px) {
+    left: 20px;
+  }
 }
 
 .bottom-tag-html {
@@ -36,4 +44,11 @@
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
+
+  @media screen and (max-width: 1199px) {
+    top: 120px;
+    height: auto;
+    min-height: auto;
+    padding-bottom: 50px;
+  }
 }
