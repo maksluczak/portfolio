@@ -30,11 +30,9 @@ const EducationSection = ({activeSection, setActiveSection}) => {
             idx={10}
           />
         </h1>
-
         <p>
-          ...
+          My educational background combines academic studies with international certifications and continuous skill development.
         </p>
-
         <div className='info-container'>
           {content.map((item, index) => (
             <div key={index} className={`info-item item-${index}`}>

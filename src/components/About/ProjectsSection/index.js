@@ -47,7 +47,15 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
         />
       </h1>
       <p>
-        Here are a few of my projects - for more, feel free to visit my GitHub.
+        Here are a few of my projects - for more, feel free to visit my{" "}
+        <a
+        href="https://github.com/maksluczak"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="github-link"
+        >
+          GitHub
+        </a>.
       </p>
 
       <div className="projects-list">

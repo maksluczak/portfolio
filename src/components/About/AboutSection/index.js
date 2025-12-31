@@ -16,7 +16,7 @@ const AboutSection = ({activeSection, setActiveSection}) => {
     { fieldName: 'Name', fieldValue: 'MAKSYMILIAN ŁUCZAK' },
     { fieldName: 'Phone', fieldValue: '(+48) 739 041 228' },
     { fieldName: 'State', fieldValue: 'COMPUTER SCIENCE MAJOR STUDENT' },
-    { fieldName: 'Email', fieldValue: 'MAKSLUCZAK99@GMAIL.COM' },
+    { fieldName: 'Email', fieldValue: 'MAKSLUCZAK99<br/>@GMAIL.COM' },
   ];
 
   return (
@@ -40,7 +40,7 @@ const AboutSection = ({activeSection, setActiveSection}) => {
           {content.map((item, index) => (
             <div key={index} className={`info-item item-${index}`}>
               <h2>{item.fieldName}:</h2>
-              <strong>{item.fieldValue}</strong>
+              <strong dangerouslySetInnerHTML={{ __html: item.fieldValue }}></strong>
             </div>
           ))}
         </div>

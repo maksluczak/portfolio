@@ -9,8 +9,6 @@ import Cube from '../About/Cube'
 const About = () => {
   const [activeSection, setActiveSection] = useState('main')
 
-  console.log(activeSection);
-
   const renderSection = () => {
     switch (activeSection) {
       case 'main': return <MainSection activeSection={activeSection} setActiveSection={setActiveSection} />;
