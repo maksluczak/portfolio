@@ -19,7 +19,6 @@ const EducationSection = ({activeSection, setActiveSection}) => {
     { institution: 'Coursera Microsoft Python<br/>Development', duration: '2025 - now' },
   ];
 
-
   return (
     <>
       <div className="education-section">

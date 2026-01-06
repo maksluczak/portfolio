@@ -32,7 +32,7 @@ const Home = () => {
           />
         </h1>
         <h2>
-          AGH University Of Cracow Student / Software Developer <br />
+          AGH University Of Krakow Student / Software Developer <br />
           Node.js / Express / React / Java / Spring Boot / Python / C/C++
         </h2>
         <p>
