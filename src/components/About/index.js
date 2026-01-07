@@ -4,6 +4,7 @@ import MainSection from './MainSection'
 import AboutSection from './AboutSection'
 import EducationSection from './EducationSection'
 import ProjectSection from './ProjectsSection'
+import SkillsSection from './SkillsSection'
 import Cube from '../About/Cube'
 
 const About = () => {
@@ -15,6 +16,7 @@ const About = () => {
       case 'about': return <AboutSection activeSection={activeSection} setActiveSection={setActiveSection} />;
       case 'education': return <EducationSection activeSection={activeSection} setActiveSection={setActiveSection} />;
       case 'projects': return <ProjectSection activeSection={activeSection} setActiveSection={setActiveSection} />;
+      case 'skills': return <SkillsSection activeSection={activeSection} setActiveSection={setActiveSection} />;
       default: return <MainSection activeSection={activeSection} setActiveSection={setActiveSection} />;
     }
   }
