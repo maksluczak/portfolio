@@ -30,7 +30,7 @@ const SkillsSection = ({activeSection, setActiveSection}) => {
           />
         </h1>
         <p>
-          I focus on building scalable applications using modern technologies and best practices in software architecture and clean code.
+          Third-year Technical Computer Science student interested in backend development, REST APIs, and databases. I enjoy learning new technologies and applying clean code principles in practice.
         </p>
         <div className='info-container'>
           {content.map((item, index) => (
