@@ -17,23 +17,23 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
   const content = [
     {
       name: 'AllerNote',
-      description: 'A three-tier application for allergy management: <b>Next.js</b> frontend for tracking pollen intensity and symptoms, <b>Express</b> backend handling API logic and authentication, <b>MongoDB</b> database storing user data, notes and history.',
+      description: 'A three-tier web application for allergy management with a <b>Next.js</b> frontend for tracking pollen intensity and personal symptoms, an <b>Express.js</b> backend handling authentication and API logic, and a <b>MongoDB</b> database storing user data, notes, and history. Deployed the frontend on <b>Vercel</b> and backend on <b>Render</b>, implementing secure cookies, CORS, and production-ready configurations.',
       link: 'https://github.com/maksluczak/aller-note-2.0',
     },
     {
-      name: 'Snake in Java',
-      description: 'A simple window-based <b>Java</b> Snake game built with <b>Swing</b>, featuring keyboard controls, dynamic movement, collision detection, and a scoring system.',
-      link: 'https://github.com/maksluczak/snake-java',
+      name: 'Fullstack PDF Toolset',
+      description: 'A web application built using <b>React and TypeScript</b>  with a <b>Spring Boot</b>  backend that enables real-time PDF generation and ZIP compression without disk storage. The backend is stateless, implemented in <b>Java</b> , and processes files fully in memory using I/O streams for better performance and data security. The application was containerized with Docker and deployed on <b>Vercel</b>  and <b>Render</b> .',
+      link: 'https://github.com/maksluczak/pdf-tools',
     },
     {
       name: 'E-Commerce App',
-      description: 'A three-tier e-commerce application built with <b>Next.js</b> and TypeScript, <b>Express</b>, and <b>MongoDB</b> for data storage. Integrated with Stripe API to simulate secure payments.',
-      link: 'https://github.com/KISiM-AGH/projekt-zaliczeniowy-ii-2025-kacyki',
+      description: 'Full-stack application built with <b>Next.js</b> and <b>Express</b> + <b>TypeScript</b>, utilizing <b>Prisma ORM with a PostgreSQL</b> database. Managed using <b>Docker</b> to ensure consistent database setups. Implemented a backend architecture featuring JWT-based authentication, Multer for image processing, and a complex product variant system.',
+      link: 'https://github.com/maksluczak/making-e-commerce',
     },
     {
-      name: 'File Upload App',
-      description: 'A full-stack application built with <b>React</b> on the frontend and <b>Spring Boot</b> on the backend, featuring a REST API for file uploads to Amazon S3.',
-      link: '#',
+      name: 'Employee Management System',
+      description: 'Backend REST API built with <b>Java and Spring Boot</b>, implementing JWT-based authentication with role-based access control. DTO-based architecture, validation, and secure endpoints. The application is integrated with a <b>PostgreSQL</b> database running in <b>Docker</b>.',
+      link: 'https://github.com/maksluczak/employee-management',
     },
   ];
 
