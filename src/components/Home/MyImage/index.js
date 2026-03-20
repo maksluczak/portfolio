@@ -1,6 +1,6 @@
 import './index.scss'
 
-const img = 'me.png';
+const img = 'me-2.png';
 
 const MyImage = () => {
   return (

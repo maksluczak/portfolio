@@ -14,9 +14,8 @@ const EducationSection = ({activeSection, setActiveSection}) => {
 
   const content = [
     { institution: 'AGH Technical Computer Science', duration: '2023 - now' },
-    { institution: 'B2 First (FCE)', duration: '2022' },
-    { institution: 'Coursera IBM JavaScript Backend<br/>Developer', duration: '2025 - now' },
-    { institution: 'Coursera Microsoft Python<br/>Development', duration: '2025 - now' },
+    { institution: 'B2 First (FCE)<br/>First Certificate in English', duration: '2022' },
+    { institution: 'Data Analysis and Visualization<br/>with Python', duration: '2026' },
   ];
 
   return (

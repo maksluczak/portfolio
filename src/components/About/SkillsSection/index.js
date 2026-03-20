@@ -13,10 +13,10 @@ const SkillsSection = ({activeSection, setActiveSection}) => {
   }, []);
 
   const content = [
-    { category: 'Programming Languages', list: 'Java, JavaScript, Python, C/C++' },
-    { category: 'Frameworks & Libraries', list: 'Node.js, Express, React, Spring Boot' },
-    { category: 'Software Development', list: 'REST API, Design Patterns,<br/>Clean Code, OOP' },
-    { category: 'Databases & Tools', list: 'MySQL, PostgreSQL, MongoDB,<br/>Git, Docker, Linux' },
+    { category: 'Programming Languages', list: 'Java, JavaScript, TypeScript, <br/>Python, C/C++' },
+    { category: 'Frameworks & Libraries', list: 'Node.js, Express, React, Next.js, <br/>Spring Boot' },
+    { category: 'Software Development Tools', list: 'DevOps practices, Git, Docker, Linux, <br/>REST API Design, AWS (S3), OOP' },
+    { category: 'Databases', list: 'PostgreSQL, MySQL, MongoDB, <br/>Prisma ORM' },
   ];
 
   return (
