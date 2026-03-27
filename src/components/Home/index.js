@@ -33,12 +33,10 @@ const Home = () => {
         </h1>
         <h2>
           AGH University Of Krakow Student / Software Developer <br />
-          Node.js / Express / React / Java / Spring Boot / Python / C/C++
+          Java, C#, JavaScript, TypeScript, Python, C/C++
         </h2>
         <p>
-          Currently looking for an internship or junior software developer
-          position where I can deepen my knowledge of backend architecture,
-          databases, and API design.
+          Third-year Computer Science student at AGH University specializing in backend development, distributed systems, and API design. Experienced in building applications with Java, Spring Boot, and .NET, including event-driven architectures with RabbitMQ. Seeking an Internship or Junior Backend Developer role.
         </p>
         <Link to="/contact" className="flat-button">
           CONTACT ME

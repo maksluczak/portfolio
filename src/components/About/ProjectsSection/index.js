@@ -16,32 +16,13 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
 
   const content = [
     {
-      name: 'AllerNote',
+      name: 'AI Document Processing Platform',
       description:
-        '– Full-stack Next.js/Express.js tracking app' +
-        '<br/>– Auth: JWT, secure cookies & CORS' +
-        '<br/>– Flexible MongoDB schema for symptoms/pollen' +
-        '<br/>– Deployed on Vercel & Render',
-      link: 'https://github.com/maksluczak/aller-note-2.0',
-      demo: 'https://aller-note-demo.com', // opcjonalnie
-    },
-    {
-      name: 'Fullstack PDF Toolset',
-      description:
-        '– Real-time PDF/ZIP tool (React, TS, Spring Boot)' +
-        '<br/>– Optimized Java I/O in-memory processing' +
-        '<br/>– High security: zero user data stored on disk',
-      link: 'https://github.com/maksluczak/pdf-tools',
-      demo: 'https://pdf-tools-demo.com',
-    },
-    {
-      name: 'E-Commerce App',
-      description:
-        '– Advanced Next.js/Express/Prisma store' +
-        '<br/>– PostgreSQL & Docker local environment' +
-        '<br/>– Product variant system & Multer processing' +
-        '<br/>– Secure JWT-based authentication flow',
-      link: 'https://github.com/maksluczak/making-e-commerce',
+        '– .NET / C# microservices architecture' +
+        '<br/>– RabbitMQ & MassTransit event-driven communication' +
+        '<br/>– MinIO storage & Azure AI Document Intelligence (OCR)' +
+        '<br/>– PostgreSQL data storage & Docker Compose setup',
+      link: 'https://github.com/maksluczak/document-ai-platform',
     },
     {
       name: 'Employee Management System',
@@ -51,6 +32,25 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
         '<br/>– Role-Based Access Control & DTO architecture' +
         '<br/>– PostgreSQL isolated in Docker container',
       link: 'https://github.com/maksluczak/employee-management',
+    },
+    {
+      name: 'AllerNote',
+      description:
+        '– Full-stack Next.js/Express.js tracking app' +
+        '<br/>– Auth: JWT, secure cookies & CORS' +
+        '<br/>– Flexible MongoDB schema for symptoms/pollen' +
+        '<br/>– Deployed on Vercel & Render',
+      link: 'https://github.com/maksluczak/aller-note-2.0',
+      demo: 'https://aller-note-2-0.vercel.app',
+    },
+    {
+      name: 'Fullstack PDF Toolset',
+      description:
+        '– Real-time PDF/ZIP tool (React, TS, Spring Boot)' +
+        '<br/>– Optimized Java I/O in-memory processing' +
+        '<br/>– High security: zero user data stored on disk',
+      link: 'https://github.com/maksluczak/pdf-tools',
+      demo: 'https://pdf-tools-maksluczak.vercel.app',
     },
   ];
 
@@ -85,6 +85,7 @@ const ProjectSection = ({activeSection, setActiveSection}) => {
               </a>
             </div>
             <div className='project-description' dangerouslySetInnerHTML={{ __html: item.description }}></div>
+            {/*{item.demo ? <div className="project-demo"><Link to={item.demo} />Demo</div> : null}*/}
           </div>
         ))}
       </div>
