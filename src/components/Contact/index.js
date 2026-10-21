@@ -1,8 +1,10 @@
 import './index.scss'
 import { useRef, useState } from 'react'
 import emailJS from '@emailjs/browser'
-import AnimatedLetters, { useLetterClass } from '../AnimatedLetters'
-import ContactRotation from './ContactRotation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import Section from '../Section'
+import { profile } from '../../data'
 
 const statusMessages = {
   sending: 'Sending...',
@@ -11,7 +13,6 @@ const statusMessages = {
 }
 
 const Contact = () => {
-  const letterClass = useLetterClass()
   const refForm = useRef()
   const [status, setStatus] = useState('idle')
 
@@ -35,33 +36,45 @@ const Contact = () => {
   }
 
   return (
-    <div className="container contact-page">
-      <div className="text-zone">
-        <h1 className="page-title">
-          <AnimatedLetters letterClass={letterClass} text="Contact me" idx={10} />
-        </h1>
-        <p className="page-intro">
-          I’m currently looking for an internship or a junior role in backend, AI, cloud or DevOps, where I can grow
-          and contribute to real projects. Feel free to reach out - I’d love to connect and discuss potential
-          opportunities.
-        </p>
-        <form ref={refForm} onSubmit={sendEmail} className="contact-form">
-          <input type="text" name="name" placeholder="Name" aria-label="Name" required />
-          <input type="email" name="email" placeholder="Email" aria-label="Email" required />
-          <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required className="full" />
-          <textarea name="message" placeholder="Message" aria-label="Message" required className="full" />
+    <Section id="contact" index="05" title="Let’s work together">
+      <div className="contact-grid">
+        <div className="contact-copy" data-reveal>
+          <p>
+            I’m looking for an internship or a junior role in backend, AI, cloud or DevOps, where I can grow and
+            contribute to real projects. Feel free to reach out - I’d love to connect.
+          </p>
+          <a href={`mailto:${profile.email}`} className="contact-email">
+            {profile.email}
+          </a>
+        </div>
+        <form ref={refForm} onSubmit={sendEmail} className="contact-form" data-reveal>
+          <label>
+            <span className="mono">Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span className="mono">Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label className="full">
+            <span className="mono">Subject</span>
+            <input type="text" name="subject" required />
+          </label>
+          <label className="full">
+            <span className="mono">Message</span>
+            <textarea name="message" rows="4" required />
+          </label>
           <div className="form-footer full">
             <span className={`form-status ${status}`} role="status">
               {statusMessages[status]}
             </span>
-            <button type="submit" className="flat-button" disabled={status === 'sending'}>
-              SEND
+            <button type="submit" className="btn primary" disabled={status === 'sending'}>
+              Send message <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>
         </form>
       </div>
-      <ContactRotation />
-    </div>
+    </Section>
   )
 }
 

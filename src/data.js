@@ -12,7 +12,9 @@ export const profile = {
 }
 
 export const home = {
-  headline: 'AGH University of Krakow Student / Software Engineer',
+  tagline: 'Software engineer building backend systems, cloud and AI.',
+  studies: '4th year CS · AGH Kraków',
+  experience: '2 internships · HERE Technologies, InAnalytics',
   languages: 'Java · C# · Python · TypeScript · Scala',
   intro:
     'Fourth-year Computer Science student at AGH University, focused on backend development, distributed systems and cloud. ' +
@@ -37,10 +39,10 @@ export const experience = [
     place: 'Kraków',
     period: 'Jul 2026 – Sep 2026',
     points: [
-      'Maintained Scala and Java data projects transforming data from the MOM format into the HMC format used by HERE WeGo.',
+      'Maintained Scala and Java data projects that transform map data from the MOM format into HMC, the format behind HERE WeGo.',
       'Developed rendering plugins in TypeScript.',
-      'Wrote SQL queries against AWS Athena.',
-      'Worked with GitHub Copilot, agent skills and MCP servers.',
+      'Wrote SQL queries to analyze data in AWS Athena.',
+      'Worked day to day with AI-assisted tooling: GitHub Copilot, agent skills and MCP servers.',
     ],
     tech: ['Scala', 'Java', 'TypeScript', 'SQL', 'AWS Athena', 'GitHub Copilot', 'MCP'],
   },
@@ -50,8 +52,8 @@ export const experience = [
     place: 'Kraków',
     period: 'Apr 2026 – Jun 2026',
     points: [
-      'Built a React application for managing PostgreSQL relational databases.',
-      'Integrated the user interface with PostgreSQL.',
+      'Built a React web application for managing PostgreSQL relational databases.',
+      'Connected the user interface to PostgreSQL, from data access to presenting results in the app.',
     ],
     tech: ['React', 'JavaScript', 'PostgreSQL', 'HTML/CSS'],
   },
@@ -69,14 +71,21 @@ export const projects = [
   {
     name: 'Employee Management System',
     description:
-      'Backend REST API for managing employee data, with role-based access control (RBAC) and AWS S3 object storage integration.',
+      'Spring Boot REST API for managing employee records, secured with role-based access control (RBAC) and integrated with AWS S3 for file storage.',
     tech: ['Java', 'Spring Boot', 'AWS S3', 'AWS SDK', 'PostgreSQL', 'Docker', 'REST API'],
     link: 'https://github.com/maksluczak/employee-management',
   },
   {
+    name: 'MarketPulse',
+    description:
+      'Scheduled Apache Airflow pipeline that ingests public cryptocurrency prices, validates and stores them, and flags unusual price or volatility spikes as alerts on a dashboard.',
+    tech: ['Python', 'Apache Airflow', 'DuckDB', 'PostgreSQL', 'Parquet', 'Pandera', 'Streamlit', 'Docker Compose', 'pytest'],
+    link: 'https://github.com/maksluczak',
+  },
+  {
     name: 'AllerNote',
     description:
-      'Full-stack web application for tracking and analyzing allergy symptoms, with JWT authentication and a flexible database schema.',
+      'Full-stack web app for tracking allergy symptoms and analyzing them over time, with JWT authentication and a flexible MongoDB schema.',
     tech: ['Next.js', 'Express.js', 'MongoDB', 'JWT', 'Vercel', 'Render'],
     link: 'https://github.com/maksluczak/aller-note-2.0',
     demo: 'https://aller-note-2-0.vercel.app',
@@ -99,7 +108,7 @@ export const certificates = [
   {
     title: 'Google Cybersecurity Professional Certificate',
     place: 'Coursera',
-    status: 'In progress',
+    period: '2026',
     link: 'https://www.coursera.org/professional-certificates/google-cybersecurity',
   },
 ]

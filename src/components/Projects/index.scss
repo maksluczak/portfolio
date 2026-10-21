@@ -1,0 +1,106 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  @media (max-width: 999px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+
+  &:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+  }
+
+  // The first project is featured across the full width
+  &:first-child {
+    grid-column: 1 / -1;
+    background: var(--heading);
+    border-color: var(--heading);
+    color: color-mix(in srgb, var(--bg) 78%, var(--heading));
+
+    h3,
+    .arrow-link {
+      color: var(--bg);
+    }
+
+    .arrow-link {
+      border-color: color-mix(in srgb, var(--bg) 35%, transparent);
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+
+    .project-number {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .chips li {
+      background: transparent;
+      border-color: color-mix(in srgb, var(--bg) 25%, transparent);
+      color: var(--bg);
+    }
+
+    h3 {
+      font-size: clamp(28px, 3.6vw, 44px);
+    }
+
+    p {
+      font-size: 17px;
+    }
+  }
+
+  h3 {
+    font-size: clamp(22px, 2.4vw, 28px);
+  }
+
+  p {
+    max-width: 70ch;
+  }
+
+  .chips {
+    margin-top: auto;
+    padding-top: 8px;
+  }
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-number {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.more-link {
+  margin-top: 32px;
+}

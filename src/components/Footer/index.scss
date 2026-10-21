@@ -1,0 +1,50 @@
+.site-footer {
+  margin-top: clamp(72px, 10vw, 128px);
+  border-top: 1px solid var(--border);
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .mono {
+    color: var(--text-muted);
+  }
+
+  ul {
+    display: flex;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--text-muted);
+    font-size: 18px;
+    transition: color 0.2s, background 0.2s;
+
+    &:hover {
+      color: var(--heading);
+      background: var(--surface);
+    }
+  }
+
+  .back-to-top {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--heading);
+    }
+  }
+}

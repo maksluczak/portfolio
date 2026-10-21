@@ -9,7 +9,15 @@
     <meta name="apple-mobile-web-app-title" content="mluczak" />
     <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#161616" />
+    <meta name="theme-color" content="#f3f1ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0e0b" media="(prefers-color-scheme: dark)" />
+    <script>
+      // Apply the saved theme before the first paint to avoid a flash
+      try {
+        var theme = localStorage.getItem('theme')
+        if (theme) document.documentElement.dataset.theme = theme
+      } catch (e) {}
+    </script>
     <meta
       name="description"
       content="Maksymilian Łuczak - Computer Science student and software developer focused on backend, AI, cloud and DevOps."
