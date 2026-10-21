@@ -1,13 +1,11 @@
 import './index.scss'
+import photo from '../../../assets/image/me-2.png'
+import { profile } from '../../../data'
 
-const img = 'me-2.png';
+const MyImage = () => (
+  <div className="my-image-container">
+    <img className="my-image" src={photo} alt={profile.fullName} />
+  </div>
+)
 
-const MyImage = () => {
-  return (
-    <div className="my-image-container">
-        <img className="my-image" src={require(`../../../assets/image/${img}`)} alt={img.split('.')[0]} />
-    </div>
-  )
-}
-
-export default MyImage;
+export default MyImage

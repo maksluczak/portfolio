@@ -1,5 +1,5 @@
 .nav-bar {
-  background: #000000;
+  background: #000;
   width: 60px;
   height: 100%;
   position: absolute;
@@ -8,58 +8,50 @@
   min-height: 500px;
 
   @media screen and (max-width: 1199px) {
+    position: fixed;
     width: 100%;
     height: 60px;
     min-height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    position: fixed;
+    padding: 0 10px;
+  }
+
+  a {
+    display: block;
+    color: var(--icon);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus-visible,
+    &.active {
+      color: var(--primary);
+    }
   }
 
   nav {
-    display: block;
-    text-align: center;
     position: absolute;
-    height: 210px;
     top: 50%;
-    margin-top: -120px;
+    transform: translateY(-50%);
     width: 100%;
+    text-align: center;
 
     @media screen and (max-width: 1199px) {
       position: static;
-      height: auto;
+      transform: none;
       width: auto;
-      margin-top: 0;
       display: flex;
     }
 
     a {
       font-size: 22px;
-      color: #4d4d4e;
-      display: block;
       line-height: 51px;
-      position: relative;
-      text-decoration: none;
 
       @media screen and (max-width: 1199px) {
         padding: 0 15px;
         line-height: 60px;
-      }
-
-      i {
-        transition: all 0.3s ease-out;
-      }
-
-      &:hover svg{
-        color: #08CB00;
-      }
-    }
-
-    a.active {
-      svg {
-        color: #08CB00;
       }
     }
   }
@@ -68,38 +60,25 @@
     position: absolute;
     bottom: 20px;
     width: 100%;
-    display: block;
+    margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
-    margin: 0;
 
     @media screen and (max-width: 1199px) {
       position: static;
       width: auto;
       display: flex;
-      padding: 0 15px;
-      line-height: 60px;
     }
 
-    li {
-      a {
-        padding: 7px 0;
-        display: block;
-        font-size: 15px;
-        line-height: 16px;
+    a {
+      padding: 7px 0;
+      font-size: 16px;
 
-        @media screen and (max-width: 1199px) {
-          position: static;
-          width: auto;
-          display: flex;
-          padding: 0 20px;
-          line-height: 60px;
-        }
-
-        &:hover svg {
-          color: #08CB00;
-        }
+      @media screen and (max-width: 1199px) {
+        padding: 0 15px;
+        font-size: 20px;
+        line-height: 60px;
       }
     }
   }

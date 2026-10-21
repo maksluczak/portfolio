@@ -3,43 +3,56 @@
   height: 100%;
   position: absolute;
   overflow-x: hidden;
-}
+  scroll-behavior: smooth;
+  // Column flow keeps the closing tags below long (scrollable) pages
+  display: flex;
+  flex-direction: column;
 
-.top-tags {
-  position: absolute;
-  top: 35px;
-  left: 120px;
-  z-index: 2;
-
-  @media screen and (max-width: 1199px) {
-    top: 80px;
-    left: 20px;
+  > * {
+    flex-shrink: 0;
   }
 }
 
 .tags {
-  color: #08CB00;
-  opacity: 0.6;
-  font-size: 18px;
-  font-family: 'La Belle Aurore', cursive;
   position: absolute;
-}
-
-.bottom-tags {
-  position: absolute;
-  bottom: 20px;
   left: 120px;
   z-index: 2;
+  color: var(--primary);
+  opacity: 0.6;
+  font-size: 18px;
+  font-family: var(--font-hand);
 
   @media screen and (max-width: 1199px) {
     left: 20px;
-    bottom: 10px;
+  }
+}
+
+.top-tags {
+  top: 35px;
+
+  @media screen and (max-width: 1199px) {
+    top: 80px;
+  }
+}
+
+.bottom-tags {
+  position: relative;
+  left: 0;
+  align-self: flex-start;
+  margin: auto 0 20px 120px;
+
+  @media screen and (max-width: 1199px) {
+    margin: auto 0 10px 20px;
   }
 }
 
 .bottom-tag-html {
   margin-left: -20px;
   display: block;
+
+  @media screen and (max-width: 1199px) {
+    margin-left: -10px;
+  }
 }
 
 .container {
@@ -53,9 +66,8 @@
   animation: fadeIn 1s forwards 1s;
 
   @media screen and (max-width: 1199px) {
-    top: 140px;
+    top: 0;
     height: auto;
-    min-height: auto;
-    padding-bottom: 80px;
+    padding: 150px 0 40px;
   }
 }

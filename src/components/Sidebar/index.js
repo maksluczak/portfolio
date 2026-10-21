@@ -3,49 +3,36 @@ import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { profile } from '../../data'
+
+const navItems = [
+  { to: '/', icon: faHome, label: 'Home' },
+  { to: '/about', icon: faUser, label: 'About' },
+  { to: '/contact', icon: faEnvelope, label: 'Contact' },
+]
+
+const socialLinks = [
+  { href: profile.links.linkedin, icon: faLinkedin, label: 'LinkedIn' },
+  { href: profile.links.github, icon: faGithub, label: 'GitHub' },
+]
 
 const Sidebar = () => (
   <div className="nav-bar">
     <nav>
-      <NavLink exact="true" activeclassname="active" to="/">
-        <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-      </NavLink>
-      <NavLink
-        exact="true"
-        activeclassname="active"
-        className="about-link"
-        to="/about"
-      >
-        <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-      </NavLink>
-      <NavLink
-        exact="true"
-        activeclassname="active"
-        className="contact-link"
-        to="/contact"
-      >
-        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-      </NavLink>
+      {navItems.map(({ to, icon, label }) => (
+        <NavLink key={to} to={to} end aria-label={label} title={label}>
+          <FontAwesomeIcon icon={icon} />
+        </NavLink>
+      ))}
     </nav>
     <ul>
-      <li>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/maksymilian-łuczak-69a10b331/"
-        >
-          <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/maksluczak"
-        >
-          <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
-        </a>
-      </li>
+      {socialLinks.map(({ href, icon, label }) => (
+        <li key={label}>
+          <a href={href} target="_blank" rel="noreferrer" aria-label={label} title={label}>
+            <FontAwesomeIcon icon={icon} />
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
 )

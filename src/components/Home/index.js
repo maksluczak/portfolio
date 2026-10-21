@@ -1,43 +1,26 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters, { useLetterClass } from '../AnimatedLetters'
 import MyImage from './MyImage'
+import { home, profile } from '../../data'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['M', 'a', 'k', 's', 'y', 'm', 'i', 'l', 'i', 'a', 'n']
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-
-    return () => clearTimeout(timeout)
-  }, [])
+  const letterClass = useLetterClass()
 
   return (
     <div className="container home-page">
       <div className="text-zone">
-        <h1>
-          <span className={letterClass}>H</span>
-          <span className={`${letterClass} _12`}>i,</span>
+        <h1 className="page-title">
+          <AnimatedLetters letterClass={letterClass} text="Hi," idx={10} />
           <br />
-          <span className={`${letterClass} _13`}>I</span>
-          <span className={`${letterClass} _14`}>'m&nbsp;</span>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={nameArray}
-            idx={15}
-          />
+          <AnimatedLetters letterClass={letterClass} text={`I'm ${profile.firstName}`} idx={13} />
         </h1>
         <h2>
-          AGH University Of Krakow Student / Software Developer <br />
-          Java, C#, JavaScript, TypeScript, Python, C/C++
+          {home.headline}
+          <br />
+          {home.languages}
         </h2>
-        <p>
-          Third-year Computer Science student at AGH University specializing in backend development, distributed systems, and API design. Experienced in building applications with Java, Spring Boot, and .NET, including event-driven architectures with RabbitMQ. Seeking an Internship or Junior Backend Developer role.
-        </p>
+        <p className="page-intro">{home.intro}</p>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
