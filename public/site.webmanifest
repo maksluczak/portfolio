@@ -1,5 +1,5 @@
 {
-  "name": "mluczak",
+  "name": "Maksymilian Łuczak",
   "short_name": "mluczak",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#121310",
+  "background_color": "#121310",
   "display": "standalone"
 }
