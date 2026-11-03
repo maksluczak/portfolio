@@ -17,9 +17,8 @@ export const home = {
   experience: '2 internships · HERE Technologies, InAnalytics',
   languages: 'Java · C# · Python · TypeScript · Scala',
   intro:
-    'Fourth-year Computer Science student at AGH University, focused on backend development, distributed systems and cloud. ' +
-    'I build event-driven services with .NET, Java and Spring Boot, and I gained hands-on experience during internships at HERE Technologies and InAnalytics. ' +
-    'Looking for an internship or a junior role in backend, AI, cloud or DevOps.',
+    'Final-year Computer Science in Engineering student at AGH University of Krakow with internship experience at HERE Technologies and InAnalytics. ' +
+    'Focused on backend development, distributed systems and cloud technologies, with hands-on experience in Java, .NET and Python.'
 }
 
 export const about = {
@@ -76,11 +75,12 @@ export const projects = [
     link: 'https://github.com/maksluczak/employee-management',
   },
   {
-    name: 'MarketPulse',
+    name: 'Crypto Pulse Pipeline',
     description:
-      'Scheduled Apache Airflow pipeline that ingests public cryptocurrency prices, validates and stores them, and flags unusual price or volatility spikes as alerts on a dashboard.',
+      'Real-time data pipeline streaming Binance trades through Kafka into Spark, detecting price anomalies with an ML model. ' +
+      'Orchestrated with Airflow DAGs, exposed via REST API, with alerts and Grafana dashboards.',
     tech: ['Python', 'Apache Airflow', 'DuckDB', 'PostgreSQL', 'Parquet', 'Pandera', 'Streamlit', 'Docker Compose', 'pytest'],
-    link: 'https://github.com/maksluczak',
+    link: 'https://github.com/maksluczak/crypto-pulse-pipeline',
   },
   {
     name: 'AllerNote',
